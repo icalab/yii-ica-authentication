@@ -9,6 +9,17 @@ Add the files to your own project and run the required script in the data direct
 
 Next, run the ICAUser model's "setup" method (or use the icainitauth yiic command).
 
+**Note** Do not forget to add an auth section to your config (don't forget your console config if you want to use the icainitauth yiic command):
+
+   'authManager'=>array(
+        'class'=>'CDbAuthManager',
+        'connectionID'=>'db',
+    ),
+    
+**Note** This authentication mechanism uses the default YII role based authentication mechanism. You therefore need to run framework/web/auth/schema-mysql.sql or framework/web/auth/schema-pgsql.sql before you can use it.
+
+
+
 License:
 --------
 
